@@ -1,33 +1,359 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:bold,bolditalic");
+/* 
+BOILERPLATE
+Boilerplate styling. Removing margin and padding, 
+setting the default fonts, bringing in material 
+design icons, and defining color variables. 
+*/
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
 }
 
 .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+:root {
+  --blue: #1992d4;
+  --white: #ffffff;
+  --gray: #e2e8f0;
+  --black: #000000;
+  --orange: #f0b42a;
+  --dark-gray: #8B8B8B;
+}
+
+html {
+  font-size: 100%;
+}
+/* 
+Organizing the container
+*/
+.container {
+  display: grid;
+  grid-template-columns: 22.5rem 6fr;
+  grid-template-rows: 20rem 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main-content";
+  height: 100vh;
+}
+
+.container div {
+  padding: 1rem;
+}
+
+/*
+Organizing the sidebar
+*/
+.sidebar {
+  grid-column: 1 / 2;
+  background-color: var(--blue);
+  display: grid;
+  grid-area: sidebar;
+  grid-template-rows: 4rem 12rem 12rem;
+  row-gap: 3rem;
+  height: 100%;
+  justify-content: start;
+  align-items: start;
+  cursor: pointer;
+}
+
+.dashboard {
+  font-size: 2rem;
+}
+
+.dashboard > .material-icons {
+  font-size: 4rem;
+}
+
+.dashboard,
+.nav,
+.menu {
+  color: var(--white);
+}
+
+.nav ul,
+.menu ul {
+  list-style: none;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.dashboard,
+.nav li,
+.menu li {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  align-items: center;
+}
+
+.nav li span,
+.menu li span {
+  justify-self: center;
+}
+
+.menu {
+  margin-top: 1.25rem;
+}
+
+/* 
+Organizing the header
+*/
+.header {
+  display: grid;
+  grid: repeat(2, 1fr) / repeat(2, 1fr);
+  background-color: var(--white);
+  padding-top: 50rem;
+  grid-area: header;
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  justify-content: start;
+  align-items: start;
+}
+
+.search-container > label {
+  padding-top: 0.5rem;
+  align-self: center;
+}
+
+#search {
+  background-color: var(--gray);
+  border-radius: 1rem;
+  border: none;
+  width: 100%;
+  height: 30%;
+  align-self: center;
+  justify-self: center;
+}
+
+.notification {
+  display: grid;
+  grid-template-columns: 3rem 3rem 10rem;
+  align-items: center;
+  justify-content: end;
+  justify-items: end;
+  column-gap: 2rem;
+}
+
+.notification img {
+  height: 3rem;
+  width: 3rem;
+  margin-left: -1.5rem;
+}
+
+.notification p {
+  font-size: x-large;
+}
+
+.main-content {
+  background-color: var(--gray);
+  grid-area: main-content;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  column-gap: 0.5rem;
+  grid-template-areas:
+    "avatar hello"
+    "avatar name";
+}
+
+.welcome img {
+  grid-area: avatar;
+  align-self: center;
+}
+
+.small-text {
+  grid-area: hello;
+  align-self: end;
+  justify-self: start;
+  font-size: medium;
+}
+
+.large-text {
+  grid-area: name;
+  align-self: start;
+  font-size: x-large;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem;
+  justify-items: end;
+  align-items: center;
+  justify-content: end;
+}
+
+button {
+  background-color: var(--blue);
+  color: var(--white);
+  align-content: center;
+  height: 2.75rem;
+  width: 8rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  justify-self: end;
+}
+
+/* 
+Main content section
+*/
+
+.section-title {
+  font-size: x-large;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+.projects {
+  grid-area: projects;
+  display: grid;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-auto-rows: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  border-left: var(--orange) solid 0.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  row-gap: 0.5rem;
+  grid-template-areas:
+    "card-title"
+    "card-text"
+    "card-icons";
+}
+
+.card-title {
+  grid-area: card-title;
+  font-size: large;
+  font-weight: 600;
+}
+
+.card-text {
+  grid-area: card-text;
+  font-weight: 300;
+}
+
+.card-icons {
+  grid-area: card-icons;
+  font-weight: 300;
+  justify-self: end;
+}
+
+.card-icons > .material-icons {
+  padding-left: 1rem;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.announcements-container {
+  display: grid;
+  background-color: var(--white);
+  border-radius: .5rem;
+  grid-template-rows: auto;
+}
+
+.announcements-title,.announcements-text {
+  font-size: medium;
+  font-weight: 200;
+}
+
+.announcements-title {
+  font-weight: 400;
+}
+.announcements-text {
+  padding-top: .25rem;
+  color: var(--black);
+}
+.announcements-item hr {
+  margin: 1rem 0 -1rem 0;
+  color: var(--black);
+}
+.trending {
+  grid-area: trending;
+}
+
+.trending-container {
+  display: grid;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+}
+
+.trending-item {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-areas:
+    "avatar handle"
+    "avatar desc";
+}
+
+.handle, .desc {
+  font-size: medium;
+  font-weight: 200;
+  align-self: center;
+
+}
+
+.handle {
+  grid-area: handle;
+  font-weight: 400;
+}
+
+.desc {
+  grid-area: desc;
+}
+
+.trending-item img {
+  height: 3rem;
+  width: 3rem;
+  grid-area: avatar;
+  align-self: center;
+}

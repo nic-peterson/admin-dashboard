@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto"
-    />
-    <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
@@ -17,7 +13,204 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="hello">Hello World</div>
-    <span class="material-icons">face</span>
+    <div class="container">
+      <div class="sidebar">
+        <div class="dashboard">
+          <span class="material-icons"> dashboard </span>
+          <p>Dashboard</p>
+        </div>
+        <div class="nav">
+          <ul>
+            <li><span class="material-icons"> home </span>Home</li>
+            <li>
+              <span class="material-icons"> account_circle </span> Profile
+            </li>
+            <li><span class="material-icons"> mode_comment </span>Messages</li>
+            <li><span class="material-icons"> watch_later </span> History</li>
+            <li><span class="material-icons"> task </span>Tasks</li>
+            <li><span class="material-icons"> groups </span>Communities</li>
+          </ul>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><span class="material-icons"> settings </span>Settings</li>
+            <li><span class="material-icons"> help </span>Support</li>
+            <li><span class="material-icons"> verified_user </span>Privacy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="header">
+        <div class="search-container">
+          <label for="search"
+            ><span class="material-icons"> search </span></label
+          >
+          <input type="search" name="search" id="search" />
+        </div>
+        <div class="notification">
+          <span class="material-icons"> notifications_active </span>
+          <img src="./assets/avatar1.svg" alt="Avatar 1" />
+          <p>Morgan Oakley</p>
+        </div>
+        <div class="welcome">
+          <img src="./assets/avatar1.svg" alt="Avatar 1" />
+          <p class="small-text">Hi there,</p>
+          <p class="large-text">Morgan Oakley (@morgan)</p>
+        </div>
+        <div class="action-buttons">
+          <button class="new">New</button>
+          <button class="upload">Upload</button>
+          <button class="share">Share</button>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="projects">
+          <div class="section-title">Your Projects</div>
+          <div class="cards">
+            <div class="card">
+              <p class="card-title">Super Cool Project</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+                diam vel quam elementum pulvinar etiam non.
+              </p>
+              <div class="card-icons">
+                <span class="material-icons"> star_border </span>
+                <span class="material-icons"> visibility </span>
+                <span class="material-icons"> api </span>
+              </div>
+            </div>
+            <div class="card">
+              <p class="card-title">Less Cool Project</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+                diam vel quam elementum pulvinar etiam non. Elementum curabitur
+                vitae nunc sed velit dignissim sodales. Sodales neque sodales ut
+                etiam sit amet nisl purus. Vehicula ipsum a arcu cursus vitae
+                congue mauris rhoncus aenean. In iaculis nunc sed augue lacus
+                viverra vitae congue eu. Ut ornare lectus sit amet est placerat
+                in egestas.
+              </p>
+              <div class="card-icons">
+                <span class="material-icons"> star_border </span>
+                <span class="material-icons"> visibility </span>
+                <span class="material-icons"> api </span>
+              </div>
+            </div>
+            <div class="card">
+              <p class="card-title">Impossible App</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+                diam vel quam elementum pulvinar etiam non.
+              </p>
+              <div class="card-icons">
+                <span class="material-icons"> star_border </span>
+                <span class="material-icons"> visibility </span>
+                <span class="material-icons"> api </span>
+              </div>
+            </div>
+            <div class="card">
+              <p class="card-title">Easy Peasy App</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+                diam vel quam elementum pulvinar etiam non.
+              </p>
+              <div class="card-icons">
+                <span class="material-icons"> star_border </span>
+                <span class="material-icons"> visibility </span>
+                <span class="material-icons"> api </span>
+              </div>
+            </div>
+            <div class="card">
+              <p class="card-title">Ad Blocker</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+                diam vel quam elementum pulvinar etiam non.
+              </p>
+              <div class="card-icons">
+                <span class="material-icons"> star_border </span>
+                <span class="material-icons"> visibility </span>
+                <span class="material-icons"> api </span>
+              </div>
+            </div>
+            <div class="card">
+              <p class="card-title">Money Maker</p>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+                diam vel quam elementum pulvinar etiam non.
+              </p>
+              <div class="card-icons">
+                <span class="material-icons"> star_border </span>
+                <span class="material-icons"> visibility </span>
+                <span class="material-icons"> api </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="announcements">
+          <div class="section-title">Announcements</div>
+          <div class="announcements-container">
+            <div class="announcements-item">
+              <p class="announcements-title">Site Maintenance</p>
+              <p class="announcements-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Fermentum leo vel orci porta non pulvinar neque. Nisl vel
+                pretium lectus quam id leo in vitae turpis.
+              </p>
+              <hr />
+            </div>
+            <div class="announcements-item">
+              <p class="announcements-title">Community Share Day</p>
+              <p class="announcements-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Fermentum leo vel orci porta non pulvinar neque. Nisl vel
+                pretium lectus quam id leo in vitae turpis.
+              </p>
+              <hr />
+            </div>
+            <div class="announcements-item">
+              <p class="announcements-title">Updated Privacy Policy</p>
+              <p class="announcements-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Fermentum leo vel orci porta non pulvinar neque. Nisl vel
+                pretium lectus quam id leo in vitae turpis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="trending">
+          <div class="section-title">Trending</div>
+          <div class="trending-container">
+            <div class="trending-item">
+              <img src="./assets/avatar2.svg" alt="Avatar 2" class="avatar" />
+              <p class="handle">@tegan</p>
+              <p class="desc">World Peace Builder</p>
+            </div>
+            <div class="trending-item">
+              <img src="./assets/avatar1.svg" alt="Avatar 1" class="avatar" />
+              <p class="handle">@morgan</p>
+              <p class="desc">Super Cool Project</p>
+            </div>
+            <div class="trending-item">
+              <img src="./assets/avatar3.svg" alt="Avatar 3" class="avatar" />
+              <p class="handle">@kendall</p>
+              <p class="desc">Life Changing App</p>
+            </div>
+            <div class="trending-item">
+              <img src="./assets/avatar4.svg" alt="Avatar 4" class="avatar" />
+              <p class="handle">@alex</p>
+              <p class="desc">No Traffic Maker</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
